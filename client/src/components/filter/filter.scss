@@ -1,0 +1,59 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h1 {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+  }
+
+  label {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  input,
+  select {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+  }
+
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    button {
+      width: 100px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background: #c89666;
+      border-radius: 20px;
+
+      &:hover {
+        background: #e1b382;
+      }
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "../../responsive.scss";
+h1 {
+  padding: 20px 0px;
+}
+
+.newPostPage {
+  height: 100%;
+  display: flex;
+
+  @include md {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+
+    .upload {
+      padding-left: 84px;
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      .formWrapper {
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .row {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              .ql-toolbar.ql-snow {
+                display: flex;
+                flex-direction: row;
+              }
+
+              .ql-container.ql-snow {
+                border: 1px solid grey;
+                border-radius: 2px;
+                background-color: white;
+                height: 300px;
+                width: 795px;
+              }
+
+              .ql-tooltip {
+                display: none;
+              }
+
+              input {
+                height: 36px;
+                border: solid 1px;
+                border-radius: 20px;
+              }
+
+              select {
+                border: solid 1px;
+                border-radius: 20px;
+                width: 168px;
+                height: 36px;
+              }
+
+              .create {
+                width: 168px;
+                margin-top: 22px;
+                height: 36px;
+                background-color: #c89666;
+                border: none;
+                border-radius: 20px;
+                transition: ease 0.4s;
+
+                &:hover {
+                  background-color: #e1b382;
+                  scale: 1.05;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    align-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .upload {
+      margin-left: 230px;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+}

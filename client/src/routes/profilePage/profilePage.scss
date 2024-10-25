@@ -1,0 +1,105 @@
+@import "../../responsive.scss";
+.profilePage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  .details {
+    flex: 3;
+    height: max-content;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      height: max-content;
+
+      button {
+        width: 150px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: #904e4e;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          font-weight: 300;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #c89666;
+          cursor: pointer;
+          border: none;
+          border-radius: 10px;
+          transition: ease 0.4s;
+          color: black;
+
+          &:hover {
+            background-color: #e1b382;
+          }
+
+          &:hover {
+            scale: 1.05;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #904e4e;
+    height: 1000px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: -8px 4px 29px 13px rgba(145, 145, 145, 0.5);
+
+    @include md {
+      flex: none;
+      height: max-content;
+      padding-bottom: 50px;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      padding-top: 20px;
+      height: 100%;
+    }
+  }
+}

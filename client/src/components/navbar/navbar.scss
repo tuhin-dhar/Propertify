@@ -1,0 +1,180 @@
+@import "../../responsive.scss";
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    transition: all 0.4s ease;
+
+    @include md {
+      font-size: 14px;
+    }
+
+    @include sm {
+      display: none;
+    }
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .right {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+
+    .signup {
+      background-color: white;
+      border-radius: 5px;
+      transition: ease 01s;
+
+      &:hover {
+        background-color: #c89666;
+      }
+    }
+
+    .signin {
+      &:hover {
+        background-color: #c89666;
+        border-radius: 5px;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+    @include md {
+      background-color: transparent;
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+
+      @include md {
+        padding: 12px 5px;
+        margin-left: 15px;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+
+      .profile {
+        padding: 12px 12px;
+        cursor: pointer;
+        position: relative;
+        background-color: #c89666;
+        border-radius: 5px;
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .profile:hover {
+        background: #e1b382;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+        box-shadow: -4px 4px 29px 0px rgba(145, 145, 145, 0.5);
+
+        @include sm {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .register {
+      background-color: rgb(156, 207, 167);
+    }
+
+    .menu-icon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: #c89666;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.active {
+        right: 0px;
+        display: inline;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}

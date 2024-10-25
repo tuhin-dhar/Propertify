@@ -1,0 +1,85 @@
+@import "../../responsive.scss";
+.loginPage {
+  height: 100%;
+  display: flex;
+
+  .loginContainer {
+    flex: 3;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-right: 200px;
+      margin-left: 100px;
+      margin-top: 120px;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        height: 45px;
+        border: solid 1px black;
+        border-radius: 10px;
+        width: 400px;
+      }
+
+      button {
+        height: 50px;
+        width: 400px;
+        border: none;
+        border-radius: 20px;
+        transition: ease 0.5s;
+        background-color: #c89666;
+
+        &:hover {
+          background-color: #e1b382;
+        }
+      }
+
+      .already {
+        text-decoration: underline;
+        color: grey;
+      }
+
+      span {
+        color: red;
+      }
+
+      @include xl {
+        margin-top: 300px;
+        padding-right: 300px;
+      }
+
+      @include lg {
+        margin-top: 90px;
+        padding-right: 150px;
+      }
+    }
+  }
+
+  .imageContainer {
+    flex: 2;
+    background-color: #f8f9fa;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 1000px;
+    background-color: #e1b382;
+    box-shadow: -8px 4px 29px 13px rgba(145, 145, 145, 0.5);
+    border-radius: 20px;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}

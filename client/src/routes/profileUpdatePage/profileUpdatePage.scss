@@ -1,0 +1,97 @@
+@import "../../responsive.scss";
+
+.profileUpdatePage {
+  height: 100%;
+  display: flex;
+
+  @include md {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .imageContainer {
+    }
+
+    .textContainer {
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+
+    form {
+      h1 {
+        font-weight: 900;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          padding-bottom: 10px;
+        }
+
+        input {
+          height: 35px;
+          width: 220px;
+          border-radius: 10px;
+          border: 1px solid;
+        }
+      }
+
+      button {
+        height: 35px;
+        width: 220px;
+        margin-top: 10px;
+        background-color: #c89666;
+        border: none;
+        border-radius: 30px;
+        transition: ease 0.4s;
+
+        &:hover {
+          background-color: #e1b382;
+          scale: 1.05;
+        }
+      }
+
+      @include xl {
+        margin-top: 300px;
+        padding-right: 300px;
+      }
+
+      @include lg {
+        margin-top: 0px;
+        padding: 0;
+      }
+
+      span {
+        color: red;
+      }
+    }
+  }
+
+  .imageContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-top: 360px;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+
+      @include lg {
+        margin-top: 90px;
+      }
+    }
+  }
+}
